@@ -17,6 +17,7 @@ require Maker::Rules;
     my $r = Maker::Rules->new($pk, 'perl-module');
     $pk->a(new Maker::Seq($r->blib($inst),
 			  $r->pod2man('Maker.pod', 3),
+			  $r->pod2html('Maker.pod'),
 			  $r->populate_blib($inst),
 			  new Maker::Unit('Maker', sub {}),
 			  ),
